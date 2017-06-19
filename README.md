@@ -1,0 +1,3 @@
+# THE README FILE OF HCZ COMMUNITY MAMAGEMENT PLATFROM
+
+** under construction **
