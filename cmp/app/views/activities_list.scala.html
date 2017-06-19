@@ -1,0 +1,38 @@
+@**
+Reqired Values:
+class ActivitiesListPage:
+    User user
+    String title
+    List[Activity] attendedActivities
+**@
+
+@import models.pages.ActivityListPage
+@(page: ActivityListPage)
+
+
+@main_templete(page.user.studentName)(page.title) {
+<p>
+    <table>
+        <thead>
+            <tr>
+                <td> 活动名称</td>
+                <td> 活动开始时间 </td>
+                <td> 活动结束时间 </td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(ativitiy <- page.attendedActivites) { 
+                <tr>
+                    <td> ativitiy.name </td>
+                    <td> ativitiy.startdate </td>
+                    <td> ativitiy.enddate </td>
+                    <!-- TODO -->
+                </tr>
+            }
+                <!-- TODO -->
+        </tbody>
+    </table>
+</p>
+} {
+
+}

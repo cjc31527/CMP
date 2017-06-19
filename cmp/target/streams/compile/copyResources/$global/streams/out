@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\application.conf,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\evolutions,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\logback.xml,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\routes,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\evolutions\default,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(E:\git_repos\Community-Management-Platform\cmp\conf\evolutions\default\1.sql,E:\git_repos\Community-Management-Platform\cmp\target\scala-2.11\classes\evolutions\default\1.sql)[0m

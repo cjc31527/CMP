@@ -1,0 +1,14 @@
+# BUG LOG #
+
+## Compilation error due to the encoding problem
+### DATE
+    2017/6/18 
+### LOCATION:
+	all template files
+### DETAILS:
+    the compiler raised "not found value 'page'", which is the argument of template's peremeter, and is written in right syntax.
+### REASON:
+    the encoding of files is UTF-8(with BOM), which cannot be dealed with correctly by the play compiler(I can say that is a bug of the compiler itself). the error prompt show on the brower did not display any giberrish, but at the bash window, I saw a redundant question mark is appended at the beginning of the file, right before "@(page..."
+### SOLUTION:
+    change encoding from UTF-8(with BOM) to UTF-8(without BOM)
+	

@@ -1,0 +1,22 @@
+@**
+Required values:
+     Student user;
+     String title;
+     Community community;
+**@
+
+@(page: models.pages.CommunityPage)
+
+@main_templete(page.user.studentName)(page.title) {
+  <html>
+  <div class="section"> 
+    <h2> @page.community.communityName </h2>
+    <h3> 简介 </h3>
+    <p> @page.community.description</p>
+  </div>
+  <div class="divider"> </div>
+  <div class="section"> <p>
+  </html>
+} {
+
+}

@@ -1,0 +1,64 @@
+@**
+Required values:
+class ActivityEditPage:
+    Student user
+    String title
+    Activity activity;
+**@
+
+@(page: models.pages.ActivityEditPage)
+@main_templete(page.user.studentName)(page.title) {
+      <script>
+	    $(document).ready(function(){
+		    counter = new function Counter() {
+                this.count = 1;
+				this.add = function() {
+					this.count++;
+				};
+				this.reduce = function() {
+				    this.count--;
+				};
+				this.reset = function() {
+				    this.count = 0;
+				};
+			};
+        });
+	  </script>
+      <div>
+        <input placeholder="活动名称" id="input-name" type="text" class="validate">
+        <label for="first_name">title</label>
+      </div>
+      <div id="activity-events">
+          <h3> 事件 </h3>
+          <div id="event-1" class="card darken-1">
+		  <div class="input-field">
+		    <input id="event-1-title" class="validate" type="text" placeholder="标题" />
+			<label for="event-1-input-title"></label>
+		  </div>
+		  <div class="input-field">
+            <input id="event-1-input-startdte" class="validate datepicker" type="date" placeholder="开始时间" required="required" />
+			<label for="event-1-input-startdate"></label>
+		  </div>
+		  <div class="input-field">
+            <input id="event-1-input-enddate" class="validate datepicker" type="date" placeholder="结束时间" required="required" />
+			<label for="event-1-input-enddate"></label>
+		  </div>
+		  <div class="input-field">
+ 		    <textarea placeholder="事件描述" id="event-1-text-input" class= "materialize-textarea" oninput="this.editor.update()"></textarea>
+		    <label for="event-1-text-input"></label>
+	      </div>
+		</div>
+      </div>
+      <div class="divider"> </div>
+	  <div class="input-field">
+        <textarea id="activity-description" class= "materialize-textarea" oninput="this.editor.update()"rows="6" cols="60">请填写 **内容** </textarea>
+		<label for="activity-description"></label>
+	  </div>
+    <div class="divider"> </div>
+    <div id="preview" class="section"> </div>
+    <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">
+      提交<i class="material-icons right">send</i> 
+    </button>
+} {
+
+}

@@ -1,0 +1,25 @@
+@**
+Required Values:
+class MassageEditPage:
+    Student user;
+    String title;
+    Message message;
+**@
+
+@(page: models.pages.MessageEditPage)
+@import helper._
+@main_templete(page.user.studentName)(page.title) {
+    @helper.form(action = routes.MessageEditPageController.edit(page.message.textID)) {
+        <input placeholder=标题 id="input-title" name="title" type="text" class="validate">
+        <label for="first_name">title</label>
+        <textarea id="text-input" name="content" oninput="this.editor.update()"
+              rows="6" cols="60"> **请输入** </textarea>
+    }
+    <div class="divider"> </div>
+    <div id="preview" class="section"> </div>
+    <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">
+      提交<i class="material-icons right">send</i> 
+    </button>
+} {
+
+}

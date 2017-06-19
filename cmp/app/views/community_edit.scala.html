@@ -1,0 +1,27 @@
+@**
+Required Value:
+class CommunityEditPage:
+    Student user
+    String title
+    Community community
+**@
+
+@(page: models.pages.CommunityEditPage)
+@main_templete(page.user.studentName)(page.title) {
+	  <div class="input-field">
+		<input placeholder="标题" id="input-name" type="text" class="validate">
+		<label for="first_name"></label>
+	  </div>
+	    <div class="input-field">
+ 		  <textarea placeholder="介绍" id="text-input" class= "materialize-textarea" oninput="this.editor.update()"></textarea>
+		  <label for="text-input"></label>
+		</div>
+	<div class="divider"> </div>
+  </div>
+	<div id="preview" class="section"> </div>
+	<button id="submit" class="btn waves-effect waves-light" type="submit" name="action">
+	  更改<i class="material-icons right"></i> 
+	</button>
+} {
+
+}

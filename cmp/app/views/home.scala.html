@@ -1,0 +1,82 @@
+@***
+Required values:
+class HomePage:
+  User user
+  String title
+  List[Activity] attentdedAtivites
+  List[Activity] activityNodtifications
+  List[Message] messages
+***@
+
+@(page: models.pages.HomePage)
+
+@main_templete(page.user.studentName)(page.title) {
+    <div id="attended-ativities" class="section scrollspy">
+      <p>
+        <h3> 已参加的活动 </h3>
+        <table>
+          <thead>
+            <tr>
+              <td> 名称</td>
+              <td> 开始时间 </td>
+              <td> 结束时间 </td>
+              <td> 更多 </td>
+            </tr>
+          </thead>
+          <tbody>
+            @for(ativitiy <- page.attendedActivites) {
+              <tr>
+                <td> ativitiy.name </td>
+                <td> ativitiy.startdate </td>
+                <td> ativitiy.enddate </td>
+                <td> <a href="@routes.ActivityPageController.showPage(ativitiy activityID)">更多</a> </td>
+              </tr>
+              }
+              <a href="@routes.ActivityListPageController.showPage()">显示所有活动  </a>
+          </tbody>
+        </table>
+      </p>
+    </div>
+    <div class="divider"></div>
+    <div id="recent-activity-notifications" class="section scrollspy">
+      <h3>活动推送 </h3>
+      <p>
+        @for(notification <- page.activityNotifications)  { 
+          <div class="a-activities-notification section">
+          <h4> notification.title </h4>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <div class="collasible-header">介绍</div>
+            <div class="collasible-body">
+              <p>notification.content</p>
+            </div>
+          </ul>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <div class="collasible-header">时间?</div>
+            <div class="collasible-body">
+              <p>notification.time</p>
+            </div>
+          </ul>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <div class="collasible-header">地址</div>
+            <div class="collasible-body">
+              <p>notification.address</p>
+            </div>
+          </ul>
+          <a href="@routes.ActivityPageController.showPage(notification.activityID)">更多</a>
+        }
+    </div>
+
+    <div id="messages">
+      <h3> 消息 </h3>
+      @for(message <- page.messages) { 
+        <p> message.content </p>
+        <div class="divider"> </div>
+        }
+    </div>
+  } {
+    <ul class="section table-of-contents">
+      <li><a href="#attended-ativities">已参加的活动</a></li>
+      <li><a href="#recent-activity-notifications">最近活动推送</a></li>
+      <li><a href="#messages">消息</a></li>
+    </ul>
+}

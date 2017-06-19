@@ -1,0 +1,55 @@
+@(page: models.pages.CommunityManagementPage)
+@*****************************************************************************
+TODO:
+Using jQuery to fetch member and message info grouped by the departments' name
+Using jQuery to fetch activitiy info
+Use Materialize's carousel effect on switching pannels.
+*****************************************************************************@
+
+@**
+Required Values:
+class CommunityManagementPage:
+    Student user;
+    String title;
+**@
+
+
+
+@main_templete(page.user.studentName)(page.title) {
+    <div id="member" class="community-management-content">
+        <h3>成员</h3>
+        <a href="#" class="btn-floating waves-effect waves-light cyan">
+            <span class="grey-text"></span>
+            <i class="material-icons pink">add</i>
+        </a>
+        <p>  </p>
+    </div>
+
+    <div id="activity" class="community-management-content">
+        <h3> 活动 </h3>
+        <a href="#" class="btn-floating waves-effect waves-light cyan">
+            <i class="material-icons red">add</i>
+            </a>
+    </div>
+    <div id="department" class="community-mamagement-content">
+        <h3> 部门 </h3>
+        <a href="#" class="btn-floating waves-effect waves-light cyan">
+          <span class="grey-text"></span>
+          <i class="material-icons red">add</i>
+        </a>
+    </div>
+    <div id="message" class="community-management-content">
+        <h3> 消息 </h3>
+        <a href="#" class="btn-floating waves-effect waves-light cyan"> <i class="material-icons">add</i> </a>
+        <!-- ajax autogenerate table TODO -->
+    </div>
+} {
+    <div class="col hide-on-small-only m3 l2">
+     <ul class="section table-of-contents">
+        <li><a href="#member"> 成员 </a></li>
+        <li><a href="#activity"> 活动 </a></li>
+        <li><a href="#department"> 部门 </a></li>
+        <li><a href="#massage"> 消息 </a></li>
+      </ul>
+    </div>
+}

@@ -1,0 +1,23 @@
+@**
+Required values:
+class ActivityPage:
+    Student user
+    String title
+    Activity activity
+**@
+@(page: models.pages.ActivityPage)
+@main_templete(page.user.studentName)(page.title) {
+    <div id="top"></div>
+    <div id="head" class="row section">
+      if (user.priviledge = StudentInfo.ADMIN) {
+        <i class="right-align material-icon"> mode_edit </button>
+      }
+    </div>
+    <div class="section"> @page.activity.discription </div>
+} {
+    <div class="col hide-on-small-only m3 l2">
+        <ul class="section table-of-contents">
+            <li><a href="#top">????</a></li>
+        </ul>
+    </div>
+}

@@ -1,0 +1,64 @@
+@(user_name: String)(title: String, stylesheets: Html = Html(""), scripts: Html = Html(""))(content: Html)(navibar: Html)
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'; style-src 'self' fonts.googleapis.com" />
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <link rel="stylesheet" href="@controllers.routes.Assets.versioned("materialize/css/materialize.min.css")" /> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  @stylesheets
+</head>
+
+<body bgcolor="#fafafa">
+  <!-- header and sidebar -->
+  <header id="header">
+    <div class="card-panel teal lighten-2 row">
+      <div class="col s1">
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="userView">
+              <div class="background"> <a herf="@routes.HomePageController.showPage()"><img src="@controllers.routes.Assets.versioned("images/navitop.jpg")"></a> </div>
+              <span class="white-text name"><h4>欢迎，@user_name</h4></span>
+            </div>
+          </li>
+          <li><a href="@routes.HomePageController.showPage()" class="side-nav-item">主页</a></li>
+          <li><a href="@routes.CommunityListPageController.showPage()" class="side-nav-item"> 社团列表 </a></li>
+          <li><a href="@routes.MessageListPageController.showPage()" class="side-nav-item"> 消息 </a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="col s11"> <h3 class="center-align white-text">@title</h3> </div>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main id="body" class="row">
+    <div id="content"> 
+      <div class="row">
+        <div id="content" class="col s9"> @content </div>
+        <div id="navibar" class="col s3"> @navibar </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer id="footer" class="card-panel teal lighten-2 row">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p class="white-text">社团管理软件</p>
+          <hr />
+          <p class="white-text"></p>
+        </div>
+      </div>
+  </footer>
+     <!-- scripts -->
+  <script type="text/javascript" src="@controllers.routes.Assets.versioned("javascripts/jquery-3.2.1.min.js")"> </script>
+  <script type="text/javascript" src="@controllers.routes.Assets.versioned("materialize/js/materialize.min.js")"> </script>
+  <script type="text/javascript" src="@controllers.routes.Assets.versioned("javascripts/init.js")"> </script>
+  <script type="text/javascript" src="@controllers.routes.Assets.versioned("md2html/lib/markdown.js")" > </script> 
+  <script type="text/javascript" src="@controllers.routes.Assets.versioned("javascripts/md2html-init.js")" /> </script>
+</body>
+</html>

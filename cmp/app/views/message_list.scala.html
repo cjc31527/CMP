@@ -1,0 +1,50 @@
+@(page: models.pages.MessageListPage) 
+@**
+Required values:
+class MassageListPage:
+    Student user;
+    String title;
+    List[Message] messages;
+
+**@
+
+
+
+<!-- TODO -->
+@pagination = {
+  <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons small">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+}
+
+@srcipts = {
+    <script lang="javascript">
+    </script>
+}
+
+@messagePanel(messages: List[Message]) = {
+  <h3> 消息 </h3>
+  @pagination
+  <div class="divider"></div>
+  @for(massage <- messages) {
+    <div class="section">
+      <h4> massage.title </h4>
+      <p> massage.content </p>
+      <div class="divider"></div>
+    </div>
+  }
+  <div class="divider"></div>
+  @pagination
+}
+
+@main_templete(page.user.studentName)(page.title) {
+    @messagePanel(page.messages)
+} {
+
+}

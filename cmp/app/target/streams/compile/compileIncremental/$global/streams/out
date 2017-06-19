@@ -1,0 +1,40 @@
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
+[0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set(E:\git_repos\Community-Management-Platform\cmp\app\Filters.java, E:\git_repos\Community-Management-Platform\cmp\app\Module.java)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(E:\git_repos\Community-Management-Platform\cmp\app\Filters.java, E:\git_repos\Community-Management-Platform\cmp\app\Module.java)[0m
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(E:\git_repos\Community-Management-Platform\cmp\app\Filters.java, E:\git_repos\Community-Management-Platform\cmp\app\Module.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(E:\git_repos\Community-Management-Platform\cmp\app\Filters.java, E:\git_repos\Community-Management-Platform\cmp\app\Module.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Recompiling all 2 sources: invalidated sources (2) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 2 Java sources to E:\git_repos\Community-Management-Platform\cmp\app\target\scala-2.10\classes...[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:1:  错误: 程序包play.filters.csrf不存在[0m
+[0m[[31merror[0m] [0mimport play.filters.csrf.CSRFFilter;[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:2:  错误: 程序包play.filters.headers不存在[0m
+[0m[[31merror[0m] [0mimport play.filters.headers.SecurityHeadersFilter;[0m
+[0m[[31merror[0m] [0m                           ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:3:  错误: 程序包play.filters.hosts不存在[0m
+[0m[[31merror[0m] [0mimport play.filters.hosts.AllowedHostsFilter;[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:4:  错误: 程序包play.http不存在[0m
+[0m[[31merror[0m] [0mimport play.http.DefaultHttpFilters;[0m
+[0m[[31merror[0m] [0m                ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:6:  错误: 程序包javax.inject不存在[0m
+[0m[[31merror[0m] [0mimport javax.inject.Inject;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:7:  错误: 程序包javax.inject不存在[0m
+[0m[[31merror[0m] [0mimport javax.inject.Singleton;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0mE:\git_repos\Community-Management-Platform\cmp\app\Filters.java:18:  错误: 找不到符号[0m
+[0m[[31merror[0m] [0mpublic class Filters extends DefaultHttpFilters {[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) javac returned nonzero exit code[0m

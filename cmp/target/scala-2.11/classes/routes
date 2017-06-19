@@ -1,0 +1,59 @@
+# Routes
+# This file defines all application controllers (Higher priority controllers first)
+# ~~~~
+
+# DEFAULT MODULE
+# An example controller showing a sample home page
+GET     /                            controllers.LoginPageController.showPage()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                controllers.Assets.versioned(path="/public", file: Asset)
+
+
+# LOGIN MODULE
+## login page
+GET     /login                       controllers.LoginPageController.showPage
+
+# HOME MODULE
+## home page
+POST    /login                       controllers.LoginPageController.login
+
+## home page
+GET     /home                        controllers.HomePageController.showPage
+
+
+# ACTIVITY MODULE
+## activity detailed page
+GET     /activities/$id<[0-9]+>      controllers.ActivityPageController.showPage(id: Int)
+
+## activity list page
+GET     /activities/list             controllers.ActivityListPageController.showPage
+
+## activity edit page
+GET     /activities/$id<[0-9]+>/modify           controllers.ActivityEditPageController.showPage(id: Int)
+
+POST    /activities/$id<[0-9]+>/modify           controllers.ActivityEditPageController.edit(id: Int)
+
+
+# COMMUNITY MODULE
+## community list page
+GET     /communities/list            controllers.CommunityListPageController.showPage
+
+GET     /communities/$id<[0-9]+>     controllers.CommunityPageController.showPage(id: Int)
+
+GET     /communities/$id<[0-9]+>/manage   controllers.CommunityManagementPageController.showPage(id: Int)
+
+## modify page
+GET     /communities/$id<[0-9]+>/modify   controllers.CommunityEditPageController.showPage(id: Int)
+
+## post forms
+POST     /communities/$id<[0-9]+>/modify   controllers.CommunityEditPageController.edit(id: Int)
+
+
+# MESSAGE MODULE
+# massage list page
+GET     /massages/list               controllers.MessageListPageController.showPage
+
+GET     /messages/$id<[0-9]+>/modify controllers.MessageEditPageController.showPage(id: Int)
+
+POST    /messages/$id<[0-9]+>/modify controllers.MessageEditPageController.edit(id: Int)

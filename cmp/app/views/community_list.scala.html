@@ -1,0 +1,32 @@
+@**
+Required Values:
+class CommunityListPage:
+    Student user;
+    String title;
+    List[Community] communityList;
+    Belongto member;
+**@
+@import models.Community
+
+@(page: models.pages.CommunityListPage)
+
+@main_templete(page.user.studentName)(page.title) {
+    <div class="container">
+        <div class="row">
+            @for(community <- page.communityList) {
+                <div class="col m4 card blue-gray darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title"><em>community.communityName</em></span>
+                        <p> community.description </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="@routes.CommunityPageController.showPage(community.communityID)">社团主页</a>
+                        <a href="@routes.CommunityManagementPageController.showPage(community.communityID)">社团管理页</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+} {
+
+}
